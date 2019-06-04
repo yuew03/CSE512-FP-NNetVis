@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="loading-bar.css"/>
+    <link rel="stylesheet" href="nnetStyle.css">
+<script type="text/javascript" src="loading-bar.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_SVG">
+  </script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$", "$"], ["\\(", "\\)"]]}
+  });
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type='text/javascript' src="https://d3js.org/d3.v4.js"></script>
+    <script type='text/javascript' src="https://unpkg.com/d3-simple-slider"></script>
+    <script type='text/javascript' src="https://unpkg.com/d3-simple-slider@0.1.2/build/d3-simple-slider.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type='text/javascript' src="nnetMain.js" charset="utf-8"></script>
+    <script type='text/javascript' src="GreekSymbol.js" charset="utf-8"></script>
+
+
+    <title>CSE512 | A3 [Add: title]</title>
+    <style media="all">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        margin: 0 auto 0 auto;
+        padding: 0;
+        max-width: 1200px;
+        font-family: "Avenir", "Avenir Next", Helvetica Neue, Arial;
+        font-size: 0.95em;
+      }
+
+      a,
+      a:visited {
+        text-decoration: none;
+        color: #7533f4;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: #f4b014;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        color: #492a7c;
+        background-color: inherit;
+        font-weight: normal;
+        padding: 0 0 5px 0;
+        margin: 15px 0 0 0;
+        border: none;
+        clear: right;
+      }
+
+      h1 {
+        font-size: 24pt;
+        margin: 5px 0 10px 0;
+        line-height: 28px;
+      }
+
+      h2 {
+        font-size: 14pt;
+        margin: 30px 0 15px 0;
+        letter-spacing: 0.01em;
+        border-bottom: 1px solid #ccc;
+        line-height: 20px;
+      }
+
+      h3 {
+        font-size: 13pt;
+      }
+
+      h4 {
+        font-size: 12pt;
+      }
+
+      h5 {
+        font-size: 11pt;
+      }
+
+      p {
+        margin: 0 0 10px 0;
+      }
+
+      .content {
+        margin: 0;
+        padding: 15px 20px;
+        background-color: #ffffff;
+      }
+
+      .title,
+      .title h1,
+      .title a {
+        color: #492a7c;
+        font-size: 24pt;
+        margin-bottom: 20px;
+        margin-top: 5px;
+      }
+
+      .footer {
+        border-top: 1px solid #ccc;
+        margin-top: 30px;
+        padding-top: 4px;
+        text-align: right;
+        font-size: 12px;
+      }
+
+      .footer a {
+        color: #21346B;
+      }
+
+      .footer a:hover {
+        color: #ce3333;
+      }
+
+    </style>
+  </head>
+
+
+
+  <body>
+    <div class="content">
+      <section class="title">
+        <a href="/">NNetVis</a>
+      </section>
+
+      <section>
+        <p>
+          <strong>Team Members</strong>: Justin Lee, Yue Wang
+        </p>
+      </section>
+
+      <section>
+        <em>[Add: a summary figure of your project. Be sure to include relevant captions, too.]</em>
+        <p><em>[Add: links to your paper and poster.]</em></p>
+      </section>
+
+      <section>
+        <h2>Abstract</h2>
+        <em>[Add: a short description of your project, ideally within 150 words.]</em>
+        <br>
+        <br>
+        <p>Deep learning is a class of machine learning algorithm which can take raw features of vastly large annotated datasets and use them to build predictive tools via the patterns buried inside. Due to the extreme size of the data, it is challenging
+          for users to understand the “internal workings” of the trained network. Collaboration with Dr. Callin Switzer at eScience Institute and Department of Biology at the University of Washington, we will be attempting to visualize his trained feedforward
+          neural network for prediction of non-linear flight dynamics of Manduca sexta. We will be using a dataset that contains sets of weights that shows the strength of each neural path, and our goal is to design a software that allows researchers
+          to generate static/interactive visualization tool that effectively gains readers/users attention to the stronger neural paths selectively within millions of network edges.</p>
+
+        <br>
+        <p>We will develop new features based on the basic structure of Neural Network graph. We envision to first implement “Parallel Coordinate” as a form of our visualization and iteratively develop various features and encodings (e.g., interactive slide
+          bar for thresholding weight of our interest, hover tooltips for detailed information about each node and edge) as we proceed. In order to better understand the characteristics of datasets, we will also perform exploratory data analysis by visualizing
+          local(layer) and global(network) distribution of weight profile. We believe this is necessary for effective visualization of our dataset since it contains millions of weight profile. Based on our exploratory data analysis, we will carefully
+          strategize data cleanup and visual implementations to provide better insights on “internal workings” of neural networks.</p>
+
+      </section>
+
+      <section>
+        <h2>Running Instructions</h2>
+        <em>[Add: running instructions for the software and other optional materials.]</em>
+        <h2>Current Topic: Set the range of weights to display </h2>
+        <div class="row align-items-center">
+          <div class="col-sm-2">
+            <p>Please slide the double direction bar to choose the range of weights you do not want to display on the NN</p>
+
+          </div>
+          <div class="col-sm">
+            <div id="slider-range"></div>
+          </div>
+          <p>
+            <span>Weights between this range will not be shown:  </span>
+            <span><p id="value-range"></p></span>
+          </p>
+
+          <div class="col-sm">
+            <div id="slider-range2"></div>
+          </div>
+        </div>
+        <div class="BiasButton">
+          <button class='btn btn-success pushme2'>Bias Nodes</button><p>Click this button in order to diplay or delete bias nodes in NN.</p>
+        </div>
+        <p>The progress bars of "Dense" represet the percentage of links for each layer in the current NN and the number of links displayed on the right of each process bar.</p>
+        <p>The progress bars of "Selected" will work when you click on the input/output node. They represent the percentage of links connected the node in each layer. Also, the number of connected links diplayed on the right of each progress bar.</p>
+        <div class="grid-container">
+          <div class="grid-item flex-container">
+            <div>
+              <p>Dense1:&nbsp&nbsp</p>
+            </div>
+            <div class="ldBar" id = "layer1per" data-preset="energy" data-fill = "#999" data-value="100" data-precision="0.01">
+            </div>
+            <div class="lnumber" id = "layer1fig">430</div>
+          </div>
+
+          <div class="grid-item flex-container">
+            <div>
+              <p>Dense2:&nbsp&nbsp</p>
+            </div>
+            <div class="ldBar" id = "layer2per" data-preset="energy" data-fill = "#999" data-value="100" data-precision="0.01">
+            </div>
+            <div class="lnumber" id = "layer2fig">5547</div>
+          </div>
+
+          <div class="grid-item flex-container">
+            <div>
+              <p>Dense3:&nbsp&nbsp</p>
+            </div>
+            <div class="ldBar" id = "layer3per" data-preset="energy" data-fill = "#999" data-value="100" data-precision="0.01">
+            </div>
+            <div class="lnumber" id = "layer3fig">9933</div>
+          </div>
+
+          <div class="grid-item flex-container">
+            <div>
+              <p>Dense4:&nbsp&nbsp</p>
+            </div>
+            <div class="ldBar" id = "layer4per" data-preset="energy" data-fill = "#999" data-value="100" data-precision="0.01">
+            </div>
+            <div class="lnumber" id = "layer4fig">7854</div>
+          </div>
+
+          <div class="grid-item flex-container">
+            <div>
+              <p>Dense5:&nbsp&nbsp</p>
+            </div>
+            <div class="ldBar" id = "layer5per" data-preset="energy" data-fill = "#999" data-value="100" data-precision="0.01">
+            </div>
+            <div class="lnumber" id = "layer5fig">714</div>
+          </div>
+
+          <div class="grid-item flex-container">
+            <div>
+              <p>Selected:&nbsp&nbsp</p>
+            </div>
+            <div class="ldBar" id = "layer1cper" data-preset="energy" data-fill = "#639b57" data-value="0" data-precision="0.01">
+            </div>
+            <div class="lnumber" id = "layer1cfig">0</div>
+          </div>
+
+          <div class="grid-item flex-container">
+            <div>
+              <p>Selected:&nbsp&nbsp</p>
+            </div>
+            <div class="ldBar" id = "layer2cper" data-preset="energy" data-fill = "#639b57" data-value="0" data-precision="0.01">
+            </div>
+            <div class="lnumber" id = "layer2cfig">0</div>
+          </div>
+
+          <div class="grid-item flex-container">
+            <div>
+              <p>Selected:&nbsp&nbsp</p>
+            </div>
+            <div class="ldBar" id = "layer3cper" data-preset="energy" data-fill = "#639b57" data-value="0" data-precision="0.01">
+            </div>
+            <div class="lnumber" id = "layer3cfig">0</div>
+          </div>
+
+          <div class="grid-item flex-container">
+            <div>
+              <p>Selected:&nbsp&nbsp</p>
+            </div>
+            <div class="ldBar" id = "layer4cper" data-preset="energy" data-fill = "#639b57" data-value="0" data-precision="0.01">
+            </div>
+            <div class="lnumber" id = "layer4cfig">0</div>
+          </div>
+
+          <div class="grid-item flex-container">
+            <div>
+              <p>Selected:&nbsp&nbsp</p>
+            </div>
+            <div class="ldBar" id = "layer5cper" data-preset="energy" data-fill = "#639b57" data-value="0" data-precision="0.01">
+            </div>
+            <div class="lnumber" id = "layer5cfig">0</div>
+          </div>
+        </div>
+
+        <div class="nnetsvg">
+            <div class="inputnodemarker0"><p>\(\dot{\theta_0}\)</p></div>
+            <div class="inputnodemarker1"><p>\(\dot{\phi_0}\)</p></div>
+            <div class="inputnodemarker2"><p>\(\dot{y_0}\)</p></div>
+            <div class="inputnodemarker3"><p>\(\dot{x_0}\)</p></div>
+            <div class="inputnodemarker4"><p>\(\theta_f\)</p></div>
+            <div class="inputnodemarker5"><p>\(\phi_f\)</p></div>
+            <div class="inputnodemarker6"><p>\(y_f\)</p></div>
+            <div class="inputnodemarker7"><p>\(x_f\)</p></div>
+            <div class="inputnodemarker8"><p>\(\theta_0\)</p></div>
+            <div class="inputnodemarker9"><p>\(\phi_0\)</p></div>
+
+            <div class="outputnodemarker0"><p>\(\dot{\theta_f}\)</p></div>
+            <div class="outputnodemarker1"><p>\(\dot{\phi_f}\)</p></div>
+            <div class="outputnodemarker2"><p>\(\dot{y_f}\)</p></div>
+            <div class="outputnodemarker3"><p>\(\dot{x_f}\)</p></div>
+            <div class="outputnodemarker4"><p>\(\tau\)</p></div>
+            <div class="outputnodemarker5"><p>\(\mathit{F_y}\)</p></div>
+            <div class="outputnodemarker6"><p>\(\mathit{F_x}\)</p></div>
+        </div>
+
+      </section>
+
+
+      <div class="footer">
+        <a href="https://courses.cs.washington.edu/courses/cse512/19sp/">CSE 512 Data Visualization</a>
+        <a href="http://www.washington.edu">University of Washington</a>
+      </div>
+    </div>
+  </body>
+</html>

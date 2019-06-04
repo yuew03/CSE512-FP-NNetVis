@@ -1,0 +1,238 @@
+
+.flex-container {
+  display: flex;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding-top: 0px;
+  padding-bottom: 30px;
+  font-size: 14px;
+  text-align: left;
+}
+
+
+.BiasButton {
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 300;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.link {
+  stroke: #999;
+  fill: #999;
+  stroke-opacity: 0.6;
+}
+
+.connected {
+  stroke: #639b57;
+  fill: #639b57;
+  stroke-opacity: 1;
+  stroke-width: 2px;
+  z-index: 10000000000;
+}
+
+.node:hover {
+  stroke: #999;
+  stroke-opacity: 0.6;
+  stroke-width: 4px;
+}
+
+.inputNodes {
+  stroke-width: 2px;
+  stroke: white;
+}
+
+.inputNodes:hover {
+  stroke: grey;
+}
+
+.outputNodes {
+  stroke-width: 2px;
+  stroke: white;
+}
+
+.outputNodes:hover {
+  stroke: grey;
+}
+
+.selected {
+  stroke: grey;
+  stroke-width: 4px;
+}
+
+.axisHiddenLayer path {
+  stroke-width: 1.5px;
+}
+
+.keep {
+  stroke-width: 1px;
+}
+
+.disappear {
+  stroke-width: 0px;
+}
+
+.inputnodemarker0 {
+  position: relative;
+  top: 66px;
+  left: 23px;
+  float: left;
+  clear: left;
+}
+
+.inputnodemarker1 {
+  position: relative;
+  top: 82px;
+  left: 23px;
+  float: left;
+  clear: left;
+}
+
+.inputnodemarker2 {
+  position: relative;
+  top: 98px;
+  left: 23px;
+  float: left;
+  clear: left;
+}
+
+.inputnodemarker3 {
+  position: relative;
+  top: 114px;
+  left: 22px;
+  float: left;
+  clear: left;
+}
+
+.inputnodemarker4 {
+  position: relative;
+  top: 130px;
+  left: 23px;
+  float: left;
+  clear: left;
+}
+
+.inputnodemarker5 {
+  position: relative;
+  top: 144px;
+  left: 23px;
+  float: left;
+  clear: left;
+}
+
+.inputnodemarker6 {
+  position: relative;
+  top: 160px;
+  left: 23px;
+  float: left;
+  clear: left;
+}
+
+.inputnodemarker7 {
+  position: relative;
+  top: 176px;
+  left: 23px;
+  float: left;
+  clear: left;
+}
+
+.inputnodemarker8 {
+  position: relative;
+  top: 194px;
+  left: 23px;
+  float: left;
+  clear: left;
+}
+
+.inputnodemarker9 {
+  position: relative;
+  top: 208px;
+  left: 23px;
+  float: left;
+  clear: left;
+}
+
+.outputnodemarker0 {
+  position: relative;
+  top:-186px;
+  left: 1170px;
+  float: left;
+  clear: left;
+}
+
+.outputnodemarker1 {
+  position: relative;
+  top:-164px;
+  left: 1170px;
+  float: left;
+  clear: left;
+}
+
+.outputnodemarker2 {
+  position: relative;
+  top:-134px;
+  left: 1170px;
+  float: left;
+  clear: left;
+}
+
+.outputnodemarker3 {
+  position: relative;
+  top:-108px;
+  left: 1170px;
+  float: left;
+  clear: left;
+}
+
+.outputnodemarker4 {
+  position: relative;
+  top:-82px;
+  left: 1172px;
+  float: left;
+  clear: left;
+}
+
+.outputnodemarker5 {
+  position: relative;
+  top:-50px;
+  left: 1170px;
+  float: left;
+  clear: left;
+}
+
+.outputnodemarker6 {
+  position: relative;
+  top:-20px;
+  left: 1170px;
+  float: left;
+  clear: left;
+}
