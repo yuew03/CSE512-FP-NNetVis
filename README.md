@@ -4,7 +4,7 @@ Team members:
 * Justin Lee  
 * Yue Wang
 
-Project page: https://cse512-19s.github.io/FP-NNetVis/  
+Project page: https://yuew03.github.io/CSE512-FP-NNetVis/  or https://cse512-19s.github.io/FP-NNetVis/  
 ## Data of a primed neural network
 6 layers, 10 input nodes and 7 output nodes
 
