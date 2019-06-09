@@ -61,4 +61,3 @@ Jun 3rd: design reviews with TAs
 Jun 5th: changed some feature based on TA's suggestion
 
 Jun 6th: start writing report and designing poster based on our visualization results
-
