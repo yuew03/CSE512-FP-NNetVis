@@ -313,7 +313,7 @@ d3.json(url, function(error, data) {
     .tickFormat(d3.format('.2'))
     .ticks(5)
     .default([0.00, 0.00])
-    .fill('#2196f3')
+    .fill('#fff')
     .on('onchange', val => {
     curSliderMin = Math.min(curSliderMin, val[0]);
     curSliderMax = Math.max(curSliderMax, val[1]);
@@ -378,7 +378,7 @@ d3.json(url, function(error, data) {
     .tickFormat(d3.format('.2'))
     .ticks(5)
     .default([0.00, 0.00])
-    .fill('#2196f3')
+    .fill('#fff')
     .on('onchange', val => {
       d3.selectAll('.link')
         .style("stroke-width", function(d) {

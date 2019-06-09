@@ -26,7 +26,7 @@
     <script type='text/javascript' src="GreekSymbol.js" charset="utf-8"></script>
 
 
-    <title>CSE512 | A3 [Add: title]</title>
+    <title>CSE512 | Final Project [Neural Network Architecture Visualization]</title>
     <style media="all">
       * {
         padding: 0;
@@ -145,13 +145,17 @@
       </section>
 
       <section>
-        <em>[Add: a summary figure of your project. Be sure to include relevant captions, too.]</em>
+        <!-- <em> -->
+        <h2>Demo Video of this project</h2>
+          <iframe width="1200" height="720" align="middle"
+            src="https://www.youtube.com/embed/NrYL23sb5TY?playlist=NrYL23sb5TY&loop=1">
+          </iframe>
+        <!-- </em> -->
         <p><em>[Add: links to your paper and poster.]</em></p>
       </section>
 
       <section>
         <h2>Abstract</h2>
-        <em>[Add: a short description of your project, ideally within 150 words.]</em>
         <br>
         <br>
         <p>Deep learning is a class of machine learning algorithm which can take raw features of vastly large annotated datasets and use them to build predictive tools via the patterns buried inside. Due to the extreme size of the data, it is challenging
@@ -169,8 +173,75 @@
 
       <section>
         <h2>Running Instructions</h2>
-        <em>[Add: running instructions for the software and other optional materials.]</em>
-        <h2>Current Topic: Set the range of weights to display </h2>
+        <!-- <em>[Add: running instructions for the software and other optional materials.]</em> -->
+        <dl>
+          <dt>
+            <b>links</b>
+          </dt>
+            <dd>- Using the slide bar with longer range to set the range of
+              weights you do not interest, the links with that weights will be
+              removed in the neural network;
+            </dd>
+            <dd>- If you are interested in a smaller range of weights, which is
+              difficult to set using the first slider bar,the seconde bar can
+              help you set a smaller range of weights to exclude;
+            </dd>
+          <dt>
+            <b>Bias node</b>
+          </dt>
+          <dd>- Click the button "Bias Nodes" to display the bias nodes for each layer;</dd>
+          <dd>- Click the button "No Bias" to delete the bias nodes for each layer;
+          <dt>
+            <b>Input/Output nodes</b>
+          </dt>
+          <dd>- Click the input/output node and the links connected the node and
+            satisfy the range in the slide bar will be highlighted;
+          </dd>
+          <dd>- Description for each node in this neural network is shown
+            below;
+          </dd>
+          <dt>
+            <b>Progress bar</b>
+          </dt>
+          <dd>
+            - Dense refers to the links in between two layers. For example, Dense1
+            represents links between the input nodes and the first hidden layer;
+          </dd>
+            - The number displayed after each dense progress bar refers to the amount
+            of links that strisfy the slider range in each dense;
+          </dd>
+          <dd>
+            - The percentage displayed under each dense progress bar refers to
+            the percentage of links that strisfy the slider range in each dense;
+            For example, if these two slide bars are in the default value, there
+            will be 430 links (links from bias node is not included) in dense1.
+            If we delete the links with the weight in [-1, 0],the number of links
+            in dense1 will be 233 and the percentage will be 233/430 * 100%, which
+            is 54.19%.
+          </dd>
+          <dd>
+            - The progress bar named as Selected will be activited when you click on
+            either the input node or the output node. After clicking, links connected
+            to this node will be highlighted in green and in the same time, these
+            selected process bar will display the details for the node that we clicked.
+          </dd>
+          <dd>
+            - The number displayed after each selected progress bar refers to
+            the amount of links that strisfy the slider range and connected
+            to the clicked node in each dense;
+          </dd>
+          <dd>
+            - The percentage displayed under each dense progress bar refers to
+            the percentage of links that connected to the clicked node as well as
+            strisfy the slider range in each dense; For example, if these two
+            slide bars are in the default value, there will be 430 links
+            (links from bias node is not included) in dense1. If we delete the
+            links with the weight in [-1, 0] and click on the first input node,
+            the number of links selected in dense1 will be 24 and the percentage
+            will be 24/430 * 100%, which is 5.58%.
+          </dd>
+        </dl>
+        <h2>Neural Network Architecture Visualization</h2>
         <div class="row align-items-center">
           <div class="col-sm-2">
             <p>Please slide the double direction bar to choose the range of weights you do not want to display on the NN</p>
@@ -305,7 +376,38 @@
             <div class="outputnodemarker5"><p>\(\mathit{F_y}\)</p></div>
             <div class="outputnodemarker6"><p>\(\mathit{F_x}\)</p></div>
         </div>
-
+        <div>
+          <img src="./img/model_para.png" alt="NnetModelPara" style="width:90%">
+        </div>
+        <p><b>Input Nodes</b><p>
+        <div class="nodesDetails flex-container">
+          <p style="padding-right: 30px;">\(\dot{\theta_0}\): starting head angular velocity (rad/s)</p>
+          <p style="padding-right: 30px;">\(\dot{\phi_0}\): starting abdomen angular velocity (rad/s)  </p>
+          <p style="padding-right: 30px;">\(\dot{y_0}\): starting vertical velocity (cm/s)  </p>
+        </div>
+        <div class="nodesDetails flex-container">
+          <p style="padding-right: 53px;">\(\dot{x_0}\): starting horizontal velocity (cm/s)  </p>
+          <p style="padding-right: 164px;">\(\theta_f\): final head angle (rad)  </p>
+          <p style="padding-right: 30px;">\(\phi_f\): final abdomen angle (rad)  </p>
+        </div>
+          <div class="nodesDetails flex-container">
+            <p style="padding-right: 103px;">\(y_f\): final vertical position (cm)  </p>
+            <p style="padding-right: 116px;">\(x_f\): final horizontal position (cm)  </p>
+            <p style="padding-right: 60px;">\(\theta_0\): starting head angle (rad)  </p>
+            <p style="padding-right: 50px;">\(\phi_0\): starting abdomen angle (rad)  </p>
+          </div>
+        <p><b>Output Nodes</b><p>
+          <div class="nodesDetails flex-container">
+            <p style="padding-right: 53px;">\(\dot{\theta_f}\): final head angular velocity (rad/s)</p>
+            <p style="padding-right: 96px;">\(\dot{\phi_f}\): final abdomen angular velocity  </p>
+            <p style="padding-right: 30px;">\(\dot{y_f}\): final vertical velocity (cm/s)</p>
+          </div>
+            <div class="nodesDetails flex-container">
+              <p style="padding-right: 76px;">\(\dot{x_f}\): final horizontal velocity (cm/s)</p>
+              <p style="padding-right: 170px;">\(\tau\): torque (g*cm^2/s^2)</p>
+              <p style="padding-right: 60px;">\(\mathit{F_y}\): vertical force (g*cm/s^2)</p>
+              <p style="padding-right: 30px;">\(\mathit{F_x}\): horizontal force (g*cm/s^2)</p>
+            </div>
       </section>
 
 

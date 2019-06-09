@@ -1,4 +1,19 @@
 
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.track-inset {
+  stroke: #5cb85c;
+}
+#slider-range  {
+  fill: black;
+  stroke: none;
+}
+
 .flex-container {
   display: flex;
 }
@@ -9,6 +24,7 @@
   background-color: white;
   padding: 10px;
   margin-bottom: 20px;
+  margin-left: 70px;
 }
 
 .grid-item {
