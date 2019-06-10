@@ -340,13 +340,14 @@ d3.json(url, function(error, data) {
           return 1;
         });
 
-
-      if (d3.select('.selected')[0] != null ){
+      if (d3.select('.selected')._groups[0] != null ){
         var curNodeID = d3.select(".selected").attr("id");
         if (curNodeID) {
           if (curNodeID[0] === "i") {
+            inputNodeDfs(Number(curNodeID.slice(2, )));
             inputReColorLinks();
           } else {
+            outputNodeDfs(Number(curNodeID.slice(2, )));
             outputReColorLinks();
           }
         }
@@ -406,16 +407,18 @@ d3.json(url, function(error, data) {
         });
 
 
-      if (d3.select('.selected')[0] != null ){
-        var curNodeID = d3.select(".selected").attr("id");
-        if (curNodeID) {
-          if (curNodeID[0] === "i") {
-            inputReColorLinks();
-          } else {
-            outputReColorLinks();
+        if (d3.select('.selected')._groups[0] != null ){
+          var curNodeID = d3.select(".selected").attr("id");
+          if (curNodeID) {
+            if (curNodeID[0] === "i") {
+              inputNodeDfs(Number(curNodeID.slice(2, )));
+              inputReColorLinks();
+            } else {
+              outputNodeDfs(Number(curNodeID.slice(2, )));
+              outputReColorLinks();
+            }
           }
         }
-      }
 
       updateInfo();
 
