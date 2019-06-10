@@ -346,6 +346,7 @@ d3.json(url, function(error, data) {
           if (curNodeID[0] === "i") {
             inputNodeDfs(Number(curNodeID.slice(2, )));
             inputReColorLinks();
+            
           } else {
             outputNodeDfs(Number(curNodeID.slice(2, )));
             outputReColorLinks();
@@ -413,6 +414,7 @@ d3.json(url, function(error, data) {
             if (curNodeID[0] === "i") {
               inputNodeDfs(Number(curNodeID.slice(2, )));
               inputReColorLinks();
+
             } else {
               outputNodeDfs(Number(curNodeID.slice(2, )));
               outputReColorLinks();
