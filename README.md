@@ -25,7 +25,7 @@ Number of weights for each layer
 Marking each node with details
 
 ## Task Assignment
-Justin Lee: report and poster, design strategy
+Justin Lee: arrange group meeting with Callin, design the architecture of our project, write the report and design our poster
 
 Yue Wang: data wrangling and coding
 
